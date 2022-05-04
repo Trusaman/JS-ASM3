@@ -7,10 +7,7 @@ submitBtn = document.getElementById("btn-submit")
 
 let userArr = getFromStorage("users").map(obj => parseUser(obj)) || []
 
-function parseUser(userData) {
-    const user = new User(userData.fName, userData.lName, userData.userName, userData.password)
-    return user
-}
+
 
 function registerData() {
     let data = new User(fNameInput.value, lNameInput.value, userNameInput.value, passwordInput.value)

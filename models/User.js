@@ -6,3 +6,8 @@ class User {
         this.password = password;
     }
 }
+
+function parseUser(userData) {
+    const user = new User(userData.fName, userData.lName, userData.userName, userData.password)
+    return user
+}
