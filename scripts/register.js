@@ -5,14 +5,19 @@ passwordInput = document.getElementById("input-password")
 passwordConfirmInput = document.getElementById("input-password-confirm")
 submitBtn = document.getElementById("btn-submit")
 
-let userArr = getFromStorage("users") || []
+let userArr = getFromStorage("users").map(obj => parseUser(obj)) || []
+
+function parseUser(userData) {
+    const user = new User(userData.fName, userData.lName, userData.userName, userData.password)
+    return user
+}
 
 function registerData() {
     let data = new User(fNameInput.value, lNameInput.value, userNameInput.value, passwordInput.value)
     if (validateData(data))
         userArr.push(data)
     saveToStorage("users", userArr)
-    // location.href = "./login.html"
+    location.href = "./login.html"
     console.log(data);
 }
 
