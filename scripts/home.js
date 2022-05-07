@@ -5,6 +5,7 @@ let logoutBtn = document.getElementById("btn-logout")
 
 if (getFromStorage("LoginUser")) {
   loginModal.style.display = "none";
+  mainContent.style.display = "block";
   document.getElementById("welcome-message").textContent = `Welcome ${
     getFromStorage("LoginUser").fName
   }`;
