@@ -5,6 +5,13 @@ class User {
         this.userName = userName;
         this.password = password;
     }
+    async getData(key) {
+        const response = await fetch(
+            `https://newsapi.org/v2/top-headlines?country=sg&category=business&pageSize=10&page=2&apiKey=${key}`
+        );
+        const data = await response.json();
+        console.log(data);
+    }
 }
 
 function parseUser(userData) {
