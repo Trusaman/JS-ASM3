@@ -5,12 +5,13 @@ class User {
         this.userName = userName;
         this.password = password;
     }
-    async getData(key) {
+    async getData(key, page, size, category) {
         const response = await fetch(
-            `https://newsapi.org/v2/top-headlines?country=sg&category=business&pageSize=10&page=2&apiKey=${key}`
+            `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${size}&page=${page}&apiKey=${key}`
         );
         const data = await response.json();
-        console.log(data);
+        return data
+
     }
 }
 
