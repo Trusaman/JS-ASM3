@@ -15,7 +15,7 @@ if (getFromStorage("LoginUser")) {
 
 function logoutData() {
     localStorage.removeItem("LoginUser")
-    location.href = "./pages/login.html"
+    window.location.href = "./pages/login.html"
 }
 
 logoutBtn.addEventListener("click", logoutData)

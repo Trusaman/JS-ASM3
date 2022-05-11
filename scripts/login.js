@@ -34,7 +34,7 @@ function loginData() {
     userName: userInput.value,
     password: passwordInput.value,
   };
-  if (validateLogin(user)) location.href = "../index.html"
+  if (validateLogin(user)) window.location.href = "../index.html"
 }
 
 submitBtn.addEventListener("click", loginData);

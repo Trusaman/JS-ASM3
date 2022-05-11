@@ -19,3 +19,11 @@ function parseUser(userData) {
     const user = new User(userData.fName, userData.lName, userData.userName, userData.password)
     return user
 }
+
+class Task {
+    constructor(task, owner, isDone) {
+        this.task = task;
+        this.owner = owner;
+        this.isDone = isDone
+    }    
+}
