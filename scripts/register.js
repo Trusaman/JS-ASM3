@@ -5,7 +5,7 @@ passwordInput = document.getElementById("input-password")
 passwordConfirmInput = document.getElementById("input-password-confirm")
 submitBtn = document.getElementById("btn-submit")
 
-let userArr = getFromStorage("users").map(obj => parseUser(obj)) || []
+let userArr = getFromStorage("users")?.map(obj => parseUser(obj)) || []
 
 
 

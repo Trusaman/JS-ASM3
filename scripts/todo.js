@@ -2,8 +2,6 @@ let taskInput = document.getElementById("input-task")
 let addBtn = document.getElementById("btn-add")
 let todoBody = document.getElementById("todo-list")
 
-
-
 let todoArr = getFromStorage("TodoList") || []
 let currentUser = getFromStorage("LoginUser") || null
 
@@ -68,6 +66,7 @@ function toggleTask(element) {
     }
     saveToStorage("TodoList", todoArr)
 }
+
 
 
 addBtn.addEventListener("click", addTaskBtn)

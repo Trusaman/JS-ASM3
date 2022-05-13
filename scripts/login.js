@@ -2,7 +2,8 @@ let userInput = document.getElementById("input-username");
 let passwordInput = document.getElementById("input-password");
 let submitBtn = document.getElementById("btn-submit");
 
-let userArr = getFromStorage("users").map((obj) => parseUser(obj)) || [];
+
+let userArr = getFromStorage("users")?.map((obj) => parseUser(obj)) || [];
 
 console.log("User arr: ", userArr);
 
